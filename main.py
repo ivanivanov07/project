@@ -21,7 +21,7 @@ with st.echo(code_location='below'):
 
     @st.cache
     def get_data():
-            data_url = ("C:/Users/lixak/PycharmProjects/hse_streamlit/StudentsPerformance.csv")
+            data_url = ("StudentsPerformance.csv")
             df = pd.read_csv(data_url)
             df['average score'] = (df['writing score'] + df['reading score'] + df['math score']) / 3
             df['average score without math'] = (df['writing score'] + df['reading score']) / 2
